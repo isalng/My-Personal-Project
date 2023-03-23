@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public FollowPlayer cameraController;
-
     private float speed = 10.0f;
     private Rigidbody playerRb;
     private float zBound = 10;
@@ -24,11 +22,8 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        //  Which way does the camera face?
-        var direction = cameraController.GetFlatDirection();
-
-        playerRb.AddForce(direction * speed * verticalInput);
-        playerRb.AddForce(direction * speed * horizontalInput);
+        playerRb.AddForce(Vector3.forward * speed * verticalInput);
+        playerRb.AddForce(Vector3.right * speed * horizontalInput);
     // Pervent player go off scrren 
         if (transform.position.z < -zBound)
         {
