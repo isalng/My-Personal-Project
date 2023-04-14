@@ -140,11 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34cc1f4fb9994420921f4aa49da41da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefabs: []
-  spawnRangeX: 15
-  spawnPosZ: 15
-  startDelay: 2
-  spawnInterval: 1.5
 --- !u!1 &160768588
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +149,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160768590}
-  - component: {fileID: 160768589}
   - component: {fileID: 160768591}
   m_Layer: 0
   m_Name: SpawnManager
@@ -163,28 +157,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &160768589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160768588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a34cc1f4fb9994420921f4aa49da41da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPrefabs:
-  - {fileID: 1063486953942002535, guid: 5c6dde297220b46fb8b4fae3fcb58b05, type: 3}
-  - {fileID: 141330219}
-  - {fileID: 1542781955}
-  - {fileID: 411993211}
-  - {fileID: 0}
-  spawnRangeX: 15
-  spawnPosZ: 15
-  startDelay: 2
-  spawnInterval: 1.5
 --- !u!4 &160768590
 Transform:
   m_ObjectHideFlags: 0
@@ -217,11 +189,6 @@ MonoBehaviour:
   - {fileID: 4149808256577830999, guid: 53cf8fd70191749ddbf66e021f28d8ce, type: 3}
   - {fileID: 3063167338802758499, guid: 9ef8e41cd4b2741e2b9b945354e9cade, type: 3}
   - {fileID: 5934477902668652648, guid: 316607dbf9862409081749e18096c93e, type: 3}
---- !u!1 &411993211 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5934477902668652648, guid: 316607dbf9862409081749e18096c93e, type: 3}
-  m_PrefabInstance: {fileID: 5934477902525948947}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &542779748
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,11 +410,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1542781955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3063167338802758499, guid: 9ef8e41cd4b2741e2b9b945354e9cade, type: 3}
-  m_PrefabInstance: {fileID: 3063167339510775648}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651968243
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dognormal
       objectReference: {fileID: 0}
+    - target: {fileID: 3162803283198056765, guid: 5c6dde297220b46fb8b4fae3fcb58b05, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6dde297220b46fb8b4fae3fcb58b05, type: 3}
 --- !u!1001 &3063167339510775648
@@ -765,6 +731,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8099526504819024173, guid: 53cf8fd70191749ddbf66e021f28d8ce, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4149808256577830995, guid: 53cf8fd70191749ddbf66e021f28d8ce, type: 3}
       propertyPath: m_RootOrder
       value: 5
